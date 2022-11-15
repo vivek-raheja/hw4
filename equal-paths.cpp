@@ -33,6 +33,8 @@ int findPathLengths(Node* node, int path[1000], int len) {
 bool equalPaths(Node * root)
 {
 	initalized = 0;
-    findPathLengths(root,new int[1000],0);
+	int* path = new int[1000];
+    findPathLengths(root,path,0);
+		delete[] path;
     return equalFlag;
 }
